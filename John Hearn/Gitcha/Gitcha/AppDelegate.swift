@@ -15,18 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
         return true
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        do{
-            let code = try GitHubService.shared.codeFrom(url: url)
-            print(code)
-        } catch {
-            print(error)
-        }
+//        do{
+//            let code = try GitHubService.shared.codeFrom(url: url)
+//            print(code)
+//        } catch {
+//            print(error)
+//        }
 
+        GitHubService.shared.tokenRequestFor(url: url, options: .userDefaults, completion: {(success) in
+
+            
+        })
         return true
     }
 
