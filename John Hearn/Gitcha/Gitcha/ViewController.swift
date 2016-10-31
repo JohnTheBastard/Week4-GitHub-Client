@@ -16,6 +16,11 @@ class ViewController: UIViewController {
         GitHubService.shared.oAuth(parameters: parameters)
 
     }
+    @IBAction func printTokenPressed(_ sender: Any) {
+        if let token = UserDefaults.standard.getAccessToken() {
+            print("Token is: \(token)")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
