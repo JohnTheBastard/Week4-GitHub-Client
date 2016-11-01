@@ -22,5 +22,16 @@ class AuthViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func dismissAuthController(){
+        // Yes, order of these two lines matters.
+        self.view.removeFromSuperview()
+        self.removeFromParentViewController()
+
+    }
 
 }

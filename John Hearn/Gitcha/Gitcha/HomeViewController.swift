@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        update()
         // Do any additional setup after loading the view.
     }
 
@@ -21,5 +21,12 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func update() {
+        GitHubService.shared.fetchRepos { (repositories) in
+            for repo in repositories! {
+                print(repo.name)
+            }
+        }
+    }
 
 }
