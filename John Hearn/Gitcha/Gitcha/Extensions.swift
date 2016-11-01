@@ -6,9 +6,15 @@
 //  Copyright © 2016 Bastardized Productions. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 let tokenKey = "access_token"
+
+extension UIResponder{
+    static var identifier: String{
+        return String(describing: self)
+    }
+}
 
 extension UserDefaults{
 
