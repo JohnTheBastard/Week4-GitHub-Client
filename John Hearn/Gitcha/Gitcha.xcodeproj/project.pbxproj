@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F24C6CFE1DC8F9EB00F6833C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6CFD1DC8F9EB00F6833C /* HomeViewController.swift */; };
+		F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */; };
 		F2A10C821DC7A8E10099323F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10C811DC7A8E10099323F /* AppDelegate.swift */; };
 		F2A10C841DC7A8E10099323F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10C831DC7A8E10099323F /* ViewController.swift */; };
 		F2A10C871DC7A8E10099323F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A10C851DC7A8E10099323F /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F24C6CFD1DC8F9EB00F6833C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controllers/AuthViewController.swift; sourceTree = "<group>"; };
 		F2A10C7E1DC7A8E10099323F /* Gitcha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitcha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A10C811DC7A8E10099323F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A10C831DC7A8E10099323F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +83,9 @@
 		F2A10C941DC7A91C0099323F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F24C6CFD1DC8F9EB00F6833C /* HomeViewController.swift */,
 				F2A10C831DC7A8E10099323F /* ViewController.swift */,
+				F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -181,8 +187,10 @@
 				F2A10CBA1DC7E28C0099323F /* Extensions.swift in Sources */,
 				F2A10C841DC7A8E10099323F /* ViewController.swift in Sources */,
 				F2A10C821DC7A8E10099323F /* AppDelegate.swift in Sources */,
+				F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */,
 				F2A10C9A1DC7C45E0099323F /* Credentials.swift in Sources */,
 				F2A10C981DC7C2360099323F /* GitHubService.swift in Sources */,
+				F24C6CFE1DC8F9EB00F6833C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +354,7 @@
 				F2A10C921DC7A8E10099323F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
