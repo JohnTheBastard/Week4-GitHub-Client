@@ -8,6 +8,9 @@
 
 import UIKit
 
+let kGitHubClientID = ""
+let kGitHubClientSecret = ""
+
 class HomeViewController: UIViewController {
 
 
@@ -42,11 +45,15 @@ class HomeViewController: UIViewController {
             self.repositoryTableView.reloadData()
         }
     }
-
-
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
+    }
+
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier,
                                                  for: indexPath) as? RepositoryCell
@@ -88,3 +95,5 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UISear
     }
 
 }
+
+

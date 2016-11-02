@@ -11,12 +11,13 @@
 		F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */; };
 		F24C6D021DC91AB600F6833C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6D011DC91AB600F6833C /* Repository.swift */; };
 		F24C6D041DC952D400F6833C /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6D031DC952D400F6833C /* RepositoryCell.swift */; };
+		F26A4E5D1DCA6AA000A3C986 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26A4E5C1DCA6AA000A3C986 /* RepoDetailViewController.swift */; };
+		F29F915B1DCA6DE50008118E /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F915A1DCA6DE50008118E /* CustomTransition.swift */; };
 		F2A10C821DC7A8E10099323F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10C811DC7A8E10099323F /* AppDelegate.swift */; };
 		F2A10C871DC7A8E10099323F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A10C851DC7A8E10099323F /* Main.storyboard */; };
 		F2A10C891DC7A8E10099323F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A10C881DC7A8E10099323F /* Assets.xcassets */; };
 		F2A10C8C1DC7A8E10099323F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A10C8A1DC7A8E10099323F /* LaunchScreen.storyboard */; };
 		F2A10C981DC7C2360099323F /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10C971DC7C2360099323F /* GitHubService.swift */; };
-		F2A10C9A1DC7C45E0099323F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10C991DC7C45E0099323F /* Credentials.swift */; };
 		F2A10CBA1DC7E28C0099323F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10CB91DC7E28C0099323F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,8 @@
 		F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controllers/AuthViewController.swift; sourceTree = "<group>"; };
 		F24C6D011DC91AB600F6833C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Models/Repository.swift; sourceTree = "<group>"; };
 		F24C6D031DC952D400F6833C /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		F26A4E5C1DCA6AA000A3C986 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
+		F29F915A1DCA6DE50008118E /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		F2A10C7E1DC7A8E10099323F /* Gitcha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitcha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A10C811DC7A8E10099323F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A10C861DC7A8E10099323F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,7 +35,6 @@
 		F2A10C8B1DC7A8E10099323F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2A10C8D1DC7A8E10099323F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2A10C971DC7C2360099323F /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
-		F2A10C991DC7C45E0099323F /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		F2A10CB91DC7E28C0099323F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		F2A10C941DC7A91C0099323F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F26A4E5C1DCA6AA000A3C986 /* RepoDetailViewController.swift */,
 				F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */,
 				F24C6CFD1DC8F9EB00F6833C /* HomeViewController.swift */,
 			);
@@ -95,6 +98,7 @@
 		F2A10C951DC7A9280099323F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F29F915A1DCA6DE50008118E /* CustomTransition.swift */,
 				F2A10C8A1DC7A8E10099323F /* LaunchScreen.storyboard */,
 				F2A10C851DC7A8E10099323F /* Main.storyboard */,
 				F24C6D031DC952D400F6833C /* RepositoryCell.swift */,
@@ -107,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				F2A10CB91DC7E28C0099323F /* Extensions.swift */,
-				F2A10C991DC7C45E0099323F /* Credentials.swift */,
 				F2A10C811DC7A8E10099323F /* AppDelegate.swift */,
 				F2A10C8D1DC7A8E10099323F /* Info.plist */,
 			);
@@ -189,9 +192,10 @@
 			files = (
 				F24C6D021DC91AB600F6833C /* Repository.swift in Sources */,
 				F2A10CBA1DC7E28C0099323F /* Extensions.swift in Sources */,
+				F26A4E5D1DCA6AA000A3C986 /* RepoDetailViewController.swift in Sources */,
 				F2A10C821DC7A8E10099323F /* AppDelegate.swift in Sources */,
+				F29F915B1DCA6DE50008118E /* CustomTransition.swift in Sources */,
 				F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */,
-				F2A10C9A1DC7C45E0099323F /* Credentials.swift in Sources */,
 				F2A10C981DC7C2360099323F /* GitHubService.swift in Sources */,
 				F24C6CFE1DC8F9EB00F6833C /* HomeViewController.swift in Sources */,
 				F24C6D041DC952D400F6833C /* RepositoryCell.swift in Sources */,
