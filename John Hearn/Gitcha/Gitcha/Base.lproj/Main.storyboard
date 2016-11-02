@@ -77,18 +77,18 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nLs-lL-aUR" id="rW9-lg-yWm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k54-AW-lkI">
-                                                    <rect key="frame" x="15" y="27" width="34" height="21"/>
+                                                    <rect key="frame" x="15" y="28" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z3s-QZ-yaP">
-                                                    <rect key="frame" x="15" y="48" width="44" height="15"/>
+                                                    <rect key="frame" x="15" y="48.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -124,6 +124,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78s-gq-Z2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-100" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VDj-BH-ztg">
+            <objects>
+                <viewController id="qMt-Wa-ylT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dKa-YD-zln"/>
+                        <viewControllerLayoutGuide type="bottom" id="VvO-BV-B0P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MZp-35-xnC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jo0-gG-P0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ic-sX-qGk">

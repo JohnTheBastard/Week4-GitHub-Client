@@ -71,16 +71,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UISear
         }
     }
 
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.resignFirstResponder()
 //        let text = searchBar.text!
-//        let filteredRepos = GitHubService.shared.allRepos.filter({$0.name.contains(text)})
+//        let filteredRepos = GitHubService.shared.allRepos.filter({$0.name.lowercased().contains(text.lowercased())})
 //        GitHubService.shared.filteredRepos = filteredRepos
 //
 //        self.repositoryTableView.reloadData()
-//    }
+    }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let filteredRepos = GitHubService.shared.allRepos.filter({$0.name.contains(searchText)})
+        let filteredRepos = GitHubService.shared.allRepos.filter({$0.name.lowercased().contains(searchText.lowercased())})
         GitHubService.shared.filteredRepos = filteredRepos
 
         self.repositoryTableView.reloadData()
