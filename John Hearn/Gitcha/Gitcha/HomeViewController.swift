@@ -13,6 +13,7 @@ let kGitHubClientSecret = ""
 
 class HomeViewController: UIViewController {
 
+    let customTransition = CustomTransition()
 
     @IBOutlet weak var repositoryTableView: UITableView!
     @IBOutlet weak var repositorySearchBar: UISearchBar!
@@ -45,6 +46,24 @@ class HomeViewController: UIViewController {
             self.repositoryTableView.reloadData()
         }
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        if segue.identifier == RepoDetailViewController.identifier{
+            if let destinationController = segue.destination as? RepoDetailViewController {
+                destinationController.transitioningDelegate = self
+            }
+
+        }
+    }
+}
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self.customTransition
+    }
+
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
