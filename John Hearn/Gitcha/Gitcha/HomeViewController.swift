@@ -23,10 +23,10 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -85,5 +85,5 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UISear
 
         self.repositoryTableView.reloadData()
     }
-    
+
 }
