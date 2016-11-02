@@ -28,7 +28,6 @@ class GitHubService {
     private var session: URLSession
     private var urlComponents: URLComponents
     var allRepos = [Repository]()
-    var filteredRepos = [Repository]()
 
     private init() {
         self.session = URLSession(configuration: .ephemeral)

@@ -7,35 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F24C6CFE1DC8F9EB00F6833C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6CFD1DC8F9EB00F6833C /* HomeViewController.swift */; };
+		F2402CC01DCA932E00C8818B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2402CBC1DCA932E00C8818B /* LaunchScreen.storyboard */; };
+		F2402CC11DCA932E00C8818B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2402CBE1DCA932E00C8818B /* Main.storyboard */; };
 		F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */; };
 		F24C6D021DC91AB600F6833C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6D011DC91AB600F6833C /* Repository.swift */; };
-		F24C6D041DC952D400F6833C /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6D031DC952D400F6833C /* RepositoryCell.swift */; };
-		F26A4E5D1DCA6AA000A3C986 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26A4E5C1DCA6AA000A3C986 /* RepoDetailViewController.swift */; };
-		F29F915B1DCA6DE50008118E /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F915A1DCA6DE50008118E /* CustomTransition.swift */; };
-		F2A10C821DC7A8E10099323F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10C811DC7A8E10099323F /* AppDelegate.swift */; };
-		F2A10C871DC7A8E10099323F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A10C851DC7A8E10099323F /* Main.storyboard */; };
-		F2A10C891DC7A8E10099323F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A10C881DC7A8E10099323F /* Assets.xcassets */; };
-		F2A10C8C1DC7A8E10099323F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A10C8A1DC7A8E10099323F /* LaunchScreen.storyboard */; };
-		F2A10C981DC7C2360099323F /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10C971DC7C2360099323F /* GitHubService.swift */; };
-		F2A10CBA1DC7E28C0099323F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10CB91DC7E28C0099323F /* Extensions.swift */; };
+		F29F915D1DCA7F1B0008118E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F915C1DCA7F1B0008118E /* Credentials.swift */; };
+		F29F91601DCA91C20008118E /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F915E1DCA91C20008118E /* GitHubService.swift */; };
+		F29F91611DCA91C20008118E /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F915F1DCA91C20008118E /* RepositoryCell.swift */; };
+		F29F91641DCA91F60008118E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F91621DCA91F60008118E /* HomeViewController.swift */; };
+		F29F91651DCA91F60008118E /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F91631DCA91F60008118E /* RepoDetailViewController.swift */; };
+		F29F91681DCA92170008118E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29F91661DCA92170008118E /* Assets.xcassets */; };
+		F29F91691DCA92170008118E /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F91671DCA92170008118E /* CustomTransition.swift */; };
+		F29F916D1DCA924C0008118E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F916A1DCA924C0008118E /* AppDelegate.swift */; };
+		F29F916E1DCA924C0008118E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F916B1DCA924C0008118E /* Extensions.swift */; };
+		F29F916F1DCA924C0008118E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F29F916C1DCA924C0008118E /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F24C6CFD1DC8F9EB00F6833C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F2402CBD1DCA932E00C8818B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2402CBF1DCA932E00C8818B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controllers/AuthViewController.swift; sourceTree = "<group>"; };
 		F24C6D011DC91AB600F6833C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Models/Repository.swift; sourceTree = "<group>"; };
-		F24C6D031DC952D400F6833C /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
-		F26A4E5C1DCA6AA000A3C986 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
-		F29F915A1DCA6DE50008118E /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		F29F915C1DCA7F1B0008118E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = Support/Credentials.swift; sourceTree = "<group>"; };
+		F29F915E1DCA91C20008118E /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubService.swift; path = Models/GitHubService.swift; sourceTree = "<group>"; };
+		F29F915F1DCA91C20008118E /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepositoryCell.swift; path = Models/RepositoryCell.swift; sourceTree = "<group>"; };
+		F29F91621DCA91F60008118E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		F29F91631DCA91F60008118E /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepoDetailViewController.swift; path = Controllers/RepoDetailViewController.swift; sourceTree = "<group>"; };
+		F29F91661DCA92170008118E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Views/Assets.xcassets; sourceTree = "<group>"; };
+		F29F91671DCA92170008118E /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTransition.swift; path = Views/CustomTransition.swift; sourceTree = "<group>"; };
+		F29F916A1DCA924C0008118E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Support/AppDelegate.swift; sourceTree = "<group>"; };
+		F29F916B1DCA924C0008118E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Support/Extensions.swift; sourceTree = "<group>"; };
+		F29F916C1DCA924C0008118E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Support/Info.plist; sourceTree = "<group>"; };
 		F2A10C7E1DC7A8E10099323F /* Gitcha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitcha.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2A10C811DC7A8E10099323F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2A10C861DC7A8E10099323F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F2A10C881DC7A8E10099323F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F2A10C8B1DC7A8E10099323F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F2A10C8D1DC7A8E10099323F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2A10C971DC7C2360099323F /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
-		F2A10CB91DC7E28C0099323F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +82,9 @@
 		F2A10C931DC7A90C0099323F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F2A10C971DC7C2360099323F /* GitHubService.swift */,
+				F29F915E1DCA91C20008118E /* GitHubService.swift */,
 				F24C6D011DC91AB600F6833C /* Repository.swift */,
+				F29F915F1DCA91C20008118E /* RepositoryCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -88,9 +92,9 @@
 		F2A10C941DC7A91C0099323F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F26A4E5C1DCA6AA000A3C986 /* RepoDetailViewController.swift */,
 				F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */,
-				F24C6CFD1DC8F9EB00F6833C /* HomeViewController.swift */,
+				F29F91621DCA91F60008118E /* HomeViewController.swift */,
+				F29F91631DCA91F60008118E /* RepoDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -98,11 +102,10 @@
 		F2A10C951DC7A9280099323F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F29F915A1DCA6DE50008118E /* CustomTransition.swift */,
-				F2A10C8A1DC7A8E10099323F /* LaunchScreen.storyboard */,
-				F2A10C851DC7A8E10099323F /* Main.storyboard */,
-				F24C6D031DC952D400F6833C /* RepositoryCell.swift */,
-				F2A10C881DC7A8E10099323F /* Assets.xcassets */,
+				F29F91671DCA92170008118E /* CustomTransition.swift */,
+				F2402CBC1DCA932E00C8818B /* LaunchScreen.storyboard */,
+				F2402CBE1DCA932E00C8818B /* Main.storyboard */,
+				F29F91661DCA92170008118E /* Assets.xcassets */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -110,9 +113,10 @@
 		F2A10C961DC7A9560099323F /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				F2A10CB91DC7E28C0099323F /* Extensions.swift */,
-				F2A10C811DC7A8E10099323F /* AppDelegate.swift */,
-				F2A10C8D1DC7A8E10099323F /* Info.plist */,
+				F29F916A1DCA924C0008118E /* AppDelegate.swift */,
+				F29F915C1DCA7F1B0008118E /* Credentials.swift */,
+				F29F916B1DCA924C0008118E /* Extensions.swift */,
+				F29F916C1DCA924C0008118E /* Info.plist */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -177,9 +181,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A10C8C1DC7A8E10099323F /* LaunchScreen.storyboard in Resources */,
-				F2A10C891DC7A8E10099323F /* Assets.xcassets in Resources */,
-				F2A10C871DC7A8E10099323F /* Main.storyboard in Resources */,
+				F2402CC01DCA932E00C8818B /* LaunchScreen.storyboard in Resources */,
+				F29F916F1DCA924C0008118E /* Info.plist in Resources */,
+				F29F91681DCA92170008118E /* Assets.xcassets in Resources */,
+				F2402CC11DCA932E00C8818B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,35 +195,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F29F916D1DCA924C0008118E /* AppDelegate.swift in Sources */,
 				F24C6D021DC91AB600F6833C /* Repository.swift in Sources */,
-				F2A10CBA1DC7E28C0099323F /* Extensions.swift in Sources */,
-				F26A4E5D1DCA6AA000A3C986 /* RepoDetailViewController.swift in Sources */,
-				F2A10C821DC7A8E10099323F /* AppDelegate.swift in Sources */,
-				F29F915B1DCA6DE50008118E /* CustomTransition.swift in Sources */,
+				F29F915D1DCA7F1B0008118E /* Credentials.swift in Sources */,
+				F29F91611DCA91C20008118E /* RepositoryCell.swift in Sources */,
+				F29F91601DCA91C20008118E /* GitHubService.swift in Sources */,
+				F29F916E1DCA924C0008118E /* Extensions.swift in Sources */,
+				F29F91691DCA92170008118E /* CustomTransition.swift in Sources */,
 				F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */,
-				F2A10C981DC7C2360099323F /* GitHubService.swift in Sources */,
-				F24C6CFE1DC8F9EB00F6833C /* HomeViewController.swift in Sources */,
-				F24C6D041DC952D400F6833C /* RepositoryCell.swift in Sources */,
+				F29F91651DCA91F60008118E /* RepoDetailViewController.swift in Sources */,
+				F29F91641DCA91F60008118E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F2A10C851DC7A8E10099323F /* Main.storyboard */ = {
+		F2402CBC1DCA932E00C8818B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F2A10C861DC7A8E10099323F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F2A10C8A1DC7A8E10099323F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F2A10C8B1DC7A8E10099323F /* Base */,
+				F2402CBD1DCA932E00C8818B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Views/Base.lproj;
+			sourceTree = "<group>";
+		};
+		F2402CBE1DCA932E00C8818B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2402CBF1DCA932E00C8818B /* Base */,
+			);
+			name = Main.storyboard;
+			path = Views/Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -322,7 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KUNVAN4RR6;
-				INFOPLIST_FILE = Gitcha/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Gitcha/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bastardized.jhearn.Gitcha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -335,7 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KUNVAN4RR6;
-				INFOPLIST_FILE = Gitcha/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Gitcha/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bastardized.jhearn.Gitcha;
 				PRODUCT_NAME = "$(TARGET_NAME)";

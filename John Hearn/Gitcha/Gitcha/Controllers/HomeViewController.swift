@@ -8,12 +8,10 @@
 
 import UIKit
 
-let kGitHubClientID = ""
-let kGitHubClientSecret = ""
-
 class HomeViewController: UIViewController {
-
+    var filteredRepos = [Repository]()
     let customTransition = CustomTransition()
+
 
     @IBOutlet weak var repositoryTableView: UITableView!
     @IBOutlet weak var repositorySearchBar: UISearchBar!
@@ -66,7 +64,24 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
 
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+extension HomeViewController: UISearchBarDelegate {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.resignFirstResponder()
+        //        let text = searchBar.text!
+        //        self.filteredRepos = GitHubService.shared.allRepos.filter({$0.name.lowercased().contains(text.lowercased())})
+        //
+        //        self.repositoryTableView.reloadData()
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.filteredRepos = GitHubService.shared.allRepos.filter({$0.name.lowercased().contains(searchText.lowercased())})
+        self.repositoryTableView.reloadData()
+    }
+
+}
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
@@ -79,7 +94,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UISear
 
         var currentRepository: Repository
         if repositorySearchBar.text! != "" {
-            currentRepository = GitHubService.shared.filteredRepos[indexPath.row]
+            currentRepository = self.filteredRepos[indexPath.row]
         } else {
             currentRepository = GitHubService.shared.allRepos[indexPath.row]
         }
@@ -91,26 +106,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate, UISear
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if repositorySearchBar.text! != "" {
-            return GitHubService.shared.filteredRepos.count
+            return self.filteredRepos.count
         } else {
             return GitHubService.shared.allRepos.count
         }
-    }
-
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.resignFirstResponder()
-//        let text = searchBar.text!
-//        let filteredRepos = GitHubService.shared.allRepos.filter({$0.name.lowercased().contains(text.lowercased())})
-//        GitHubService.shared.filteredRepos = filteredRepos
-//
-//        self.repositoryTableView.reloadData()
-    }
-
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let filteredRepos = GitHubService.shared.allRepos.filter({$0.name.lowercased().contains(searchText.lowercased())})
-        GitHubService.shared.filteredRepos = filteredRepos
-
-        self.repositoryTableView.reloadData()
     }
 
 }
