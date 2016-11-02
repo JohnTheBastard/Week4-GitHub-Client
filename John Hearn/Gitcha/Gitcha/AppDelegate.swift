@@ -25,9 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         GitHubService.shared.tokenRequestFor(url: url, options: .userDefaults,
                                              completion: {(success) in
-            if let authController = self.authController, let homeController = self.homeController{
+            if let authController = self.authController, let _ = self.homeController{
                 authController.dismissAuthController()
-                homeController.update()
+                //homeController.update()
             }
         })
         return true

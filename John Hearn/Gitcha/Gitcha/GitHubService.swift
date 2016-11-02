@@ -27,11 +27,13 @@ class GitHubService {
     static let shared = GitHubService()
     private var session: URLSession
     private var urlComponents: URLComponents
+    var allRepos = [Repository]()
+    var filteredRepos = [Repository]()
 
     private init() {
         self.session = URLSession(configuration: .ephemeral)
         self.urlComponents = URLComponents()
-        configure()
+        //configure()
     }
 
     private func configure() {
@@ -45,6 +47,7 @@ class GitHubService {
     }
 
     func fetchRepos(completion: @escaping RepoCompletion) {
+        self.configure()
         self.urlComponents.path = "/user/repos"
 
         guard let url = self.urlComponents.url else { completion(nil); return }
