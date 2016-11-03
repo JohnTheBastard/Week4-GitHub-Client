@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F2402CC01DCA932E00C8818B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2402CBC1DCA932E00C8818B /* LaunchScreen.storyboard */; };
 		F2402CC11DCA932E00C8818B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2402CBE1DCA932E00C8818B /* Main.storyboard */; };
+		F2402CC31DCAC7F900C8818B /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2402CC21DCAC7F900C8818B /* RepositoryCell.xib */; };
 		F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */; };
 		F24C6D021DC91AB600F6833C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6D011DC91AB600F6833C /* Repository.swift */; };
 		F29F915D1DCA7F1B0008118E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F915C1DCA7F1B0008118E /* Credentials.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		F2402CBD1DCA932E00C8818B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2402CBF1DCA932E00C8818B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		F2402CC21DCAC7F900C8818B /* RepositoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RepositoryCell.xib; path = Views/RepositoryCell.xib; sourceTree = "<group>"; };
 		F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controllers/AuthViewController.swift; sourceTree = "<group>"; };
 		F24C6D011DC91AB600F6833C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Models/Repository.swift; sourceTree = "<group>"; };
 		F29F915C1DCA7F1B0008118E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = Support/Credentials.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				F29F91671DCA92170008118E /* CustomTransition.swift */,
 				F2402CBC1DCA932E00C8818B /* LaunchScreen.storyboard */,
 				F2402CBE1DCA932E00C8818B /* Main.storyboard */,
+				F2402CC21DCAC7F900C8818B /* RepositoryCell.xib */,
 				F29F91661DCA92170008118E /* Assets.xcassets */,
 			);
 			name = Views;
@@ -184,6 +187,7 @@
 				F2402CC01DCA932E00C8818B /* LaunchScreen.storyboard in Resources */,
 				F29F916F1DCA924C0008118E /* Info.plist in Resources */,
 				F29F91681DCA92170008118E /* Assets.xcassets in Resources */,
+				F2402CC31DCAC7F900C8818B /* RepositoryCell.xib in Resources */,
 				F2402CC11DCA932E00C8818B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
