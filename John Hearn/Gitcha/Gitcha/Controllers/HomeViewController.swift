@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationController?.navigationBar.tintColor = .white
         self.repositoryTableView.dataSource = self
         self.repositoryTableView.delegate = self
         self.repositorySearchBar.delegate = self
@@ -49,8 +51,12 @@ class HomeViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
 
         if segue.identifier == RepoDetailViewController.identifier{
+            
             if let destinationController = segue.destination as? RepoDetailViewController {
                 destinationController.transitioningDelegate = self
+                destinationController.navigationController?.transitioningDelegate = self
+
+
             }
 
         }
@@ -59,6 +65,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self.customTransition
+    }
+
+}
+
+extension HomeViewController: UINavigationControllerDelegate{
+
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self.customTransition
     }
 

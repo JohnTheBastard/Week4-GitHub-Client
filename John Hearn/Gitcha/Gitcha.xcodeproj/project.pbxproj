@@ -71,6 +71,7 @@
 		F2A10C801DC7A8E10099323F /* Gitcha */ = {
 			isa = PBXGroup;
 			children = (
+				F29F916C1DCA924C0008118E /* Info.plist */,
 				F2A10C931DC7A90C0099323F /* Models */,
 				F2A10C941DC7A91C0099323F /* Controllers */,
 				F2A10C951DC7A9280099323F /* Views */,
@@ -116,7 +117,6 @@
 				F29F916A1DCA924C0008118E /* AppDelegate.swift */,
 				F29F915C1DCA7F1B0008118E /* Credentials.swift */,
 				F29F916B1DCA924C0008118E /* Extensions.swift */,
-				F29F916C1DCA924C0008118E /* Info.plist */,
 			);
 			name = Support;
 			sourceTree = "<group>";
