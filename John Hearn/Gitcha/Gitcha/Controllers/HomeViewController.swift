@@ -51,11 +51,18 @@ class HomeViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
 
         if segue.identifier == RepoDetailViewController.identifier{
-            
+            let selectedIndex = repositoryTableView.indexPathForSelectedRow!.row
+            let selectedRepository: Repository
+            if repositorySearchBar.text! != "" {
+                selectedRepository = self.filteredRepos[selectedIndex]
+            } else {
+                selectedRepository = GitHubService.shared.allRepos[selectedIndex]
+            }
+
             if let destinationController = segue.destination as? RepoDetailViewController {
                 destinationController.transitioningDelegate = self
                 destinationController.navigationController?.transitioningDelegate = self
-
+                destinationController.repository = selectedRepository
 
             }
 
