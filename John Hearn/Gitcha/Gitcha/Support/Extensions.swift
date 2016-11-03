@@ -17,7 +17,6 @@ extension UIResponder{
 }
 
 extension UserDefaults{
-
     func getAccessToken() -> String?{
         return self.string(forKey: tokenKey)
     }
@@ -26,5 +25,25 @@ extension UserDefaults{
         self.set(accessToken, forKey: tokenKey)
         return synchronize()
     }
+}
 
+extension String{
+    var isValid: Bool{
+        let pattern = "[^0-9a-z]"
+
+        do{
+            let regex = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+            let range = NSRange(location: 0, length: self.characters.count)
+
+            let matches = regex.numberOfMatches(in: self, options: .reportCompletion, range: range)
+
+            if matches > 0 {
+                return false
+            }
+        }catch{
+            return false
+        }
+
+        return true
+    }
 }
