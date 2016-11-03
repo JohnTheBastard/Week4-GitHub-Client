@@ -69,7 +69,7 @@ class HomeViewController: UIViewController {
 
             if let destinationController = segue.destination as? RepoDetailViewController {
                 destinationController.transitioningDelegate = self
-                destinationController.navigationController?.transitioningDelegate = self
+                self.navigationController?.delegate = self
                 destinationController.repository = selectedRepository
 
             }

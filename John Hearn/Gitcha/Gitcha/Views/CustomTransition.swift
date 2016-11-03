@@ -25,12 +25,6 @@ class CustomTransition: NSObject {
         self.damping = damping!
         self.springVelocity = springVelocity!
     }
-}
-
-extension CustomTransition: UIViewControllerAnimatedTransitioning{
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return duration
-    }
 
     func setupTransform(scaleX: CGFloat? = 1.0,
                         scaleY: CGFloat? = 1.0,
@@ -38,6 +32,13 @@ extension CustomTransition: UIViewControllerAnimatedTransitioning{
                         translateY: CGFloat? = 0.0) -> CGAffineTransform {
         return CGAffineTransform(a: scaleX!, b: 0.0, c: 0.0, d: scaleY!, tx: translateX!, ty: translateY!)
 
+    }
+    
+}
+
+extension CustomTransition: UIViewControllerAnimatedTransitioning{
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return duration
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {

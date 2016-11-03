@@ -20,6 +20,9 @@ class RepoDetailViewController: UIViewController {
 
     override func viewDidLoad(){
         super.viewDidLoad()
+//        UIView.animate(withDuration: 0.1, animations: {
+//            self.view.layoutIfNeeded()
+//        })
         repositoryLabel.text = repository.name
         descriptionLabel.text = repository.description
         watchersLabel.text = String(repository.watchers!)
