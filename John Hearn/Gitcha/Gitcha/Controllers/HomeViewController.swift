@@ -19,10 +19,18 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.repositoryTableView.estimatedRowHeight = 75
+        self.repositoryTableView.rowHeight = UITableViewAutomaticDimension
+
+
         self.navigationController?.navigationBar.tintColor = .white
         self.repositoryTableView.dataSource = self
         self.repositoryTableView.delegate = self
         self.repositorySearchBar.delegate = self
+
+        let nib = UINib(nibName: "RepositoryTableViewCell", bundle: Bundle.main)
+        self.repositoryTableView.register(nib, forCellReuseIdentifier: RepositoryTableViewCell.identifier)
+
         update()
         // Do any additional setup after loading the view.
     }
@@ -110,8 +118,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier,
-                                                 for: indexPath) as? RepositoryCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryTableViewCell.identifier,
+                                                 for: indexPath) as? RepositoryTableViewCell
 
         var currentRepository: Repository
         if repositorySearchBar.text! != "" {
@@ -120,8 +128,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             currentRepository = GitHubService.shared.allRepos[indexPath.row]
         }
 
-        cell?.textLabel?.text = currentRepository.name
-        cell?.detailTextLabel?.text = currentRepository.description
+        cell?.repositoryLabel?.text = currentRepository.name
+        cell?.descriptionLabel?.text = currentRepository.description
         return cell!
     }
 
