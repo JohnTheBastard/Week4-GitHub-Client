@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -265,53 +266,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7nH-rS-JBN">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Zi-KO-gQb">
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" translucent="NO" id="gGE-cF-gqZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="barTintColor" red="0.27450980390000002" green="0.78823529410000004" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="L0R-vR-1sD" style="IBUITableViewCellStyleDefault" id="TVl-ZD-UER">
-                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TVl-ZD-UER" id="GGz-Ep-SGb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MLI-3i-Z8w">
+                                    <size key="itemSize" width="133" height="154"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserSearchCollectionViewCell" id="VBx-yB-dSp" customClass="UserSearchCollectionViewCell" customModule="Gitcha" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="154"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="133" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L0R-vR-1sD">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J9j-e3-zCS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="133" height="133"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="J9j-e3-zCS" secondAttribute="height" multiplier="1:1" id="Lir-iV-YU7"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UsernameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mT-fn-izV">
+                                                    <rect key="frame" x="0.0" y="133" width="133" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.78823529410000004" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="J9j-e3-zCS" secondAttribute="trailing" id="F05-sK-Tox"/>
+                                            <constraint firstItem="J9j-e3-zCS" firstAttribute="top" secondItem="VBx-yB-dSp" secondAttribute="top" id="Fic-Eg-IOl"/>
+                                            <constraint firstAttribute="trailing" secondItem="2mT-fn-izV" secondAttribute="trailing" id="XYQ-rb-Elp"/>
+                                            <constraint firstItem="2mT-fn-izV" firstAttribute="leading" secondItem="VBx-yB-dSp" secondAttribute="leading" id="bxF-hr-61Y"/>
+                                            <constraint firstItem="J9j-e3-zCS" firstAttribute="leading" secondItem="VBx-yB-dSp" secondAttribute="leading" id="rJ8-9E-VkL"/>
+                                            <constraint firstItem="2mT-fn-izV" firstAttribute="top" secondItem="J9j-e3-zCS" secondAttribute="bottom" id="uAj-nx-BCY"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="J9j-e3-zCS" id="O5S-g2-Jj3"/>
+                                            <outlet property="usernameLabel" destination="2mT-fn-izV" id="dcJ-9b-sg5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" placeholder="username" translatesAutoresizingMaskIntoConstraints="NO" id="0dI-9s-Pi8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.27450980390000002" green="0.78823529410000004" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="7nH-rS-JBN" secondAttribute="trailing" id="EnY-8B-ITJ"/>
-                            <constraint firstItem="7nH-rS-JBN" firstAttribute="top" secondItem="0bA-f8-uNy" secondAttribute="bottom" id="Hju-OJ-Q4M"/>
-                            <constraint firstItem="7nH-rS-JBN" firstAttribute="leading" secondItem="tPN-0J-mSh" secondAttribute="leading" id="JuO-cK-oth"/>
-                            <constraint firstItem="3Gy-yN-07g" firstAttribute="top" secondItem="7nH-rS-JBN" secondAttribute="bottom" id="shn-Dv-F1s"/>
+                            <constraint firstAttribute="trailing" secondItem="0dI-9s-Pi8" secondAttribute="trailing" id="BlX-dw-G9V"/>
+                            <constraint firstItem="0dI-9s-Pi8" firstAttribute="leading" secondItem="tPN-0J-mSh" secondAttribute="leading" id="Hhn-lg-u04"/>
+                            <constraint firstItem="0Zi-KO-gQb" firstAttribute="leading" secondItem="tPN-0J-mSh" secondAttribute="leadingMargin" id="ZGS-eN-HYu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Zi-KO-gQb" secondAttribute="trailing" id="dG4-Jf-KGG"/>
+                            <constraint firstItem="0Zi-KO-gQb" firstAttribute="top" secondItem="0dI-9s-Pi8" secondAttribute="bottom" id="e0A-l2-2E9"/>
+                            <constraint firstItem="3Gy-yN-07g" firstAttribute="top" secondItem="0Zi-KO-gQb" secondAttribute="bottom" id="rj3-6r-uML"/>
+                            <constraint firstItem="0dI-9s-Pi8" firstAttribute="top" secondItem="0bA-f8-uNy" secondAttribute="bottom" id="uqR-xq-3Vr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="User Search" id="vfB-cD-H7Z"/>
                     <connections>
-                        <outlet property="searchBar" destination="gGE-cF-gqZ" id="jiG-I6-eWC"/>
-                        <outlet property="tableView" destination="7nH-rS-JBN" id="ndX-qh-mHA"/>
+                        <outlet property="collectionView" destination="0Zi-KO-gQb" id="9hM-lQ-Vln"/>
+                        <outlet property="searchBar" destination="0dI-9s-Pi8" id="kcc-u7-Mvp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9H-pg-lPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="900"/>
+            <point key="canvasLocation" x="837.60000000000002" y="899.10044977511257"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zNR-uF-DNH">

@@ -9,27 +9,41 @@
 import UIKit
 import SafariServices
 
+protocol UserSearchViewControllerDelegate : class{
+    func userSearchViewController(selected: UIImage)
+}
+
 class UserSearchViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    weak var delegate: UserSearchViewControllerDelegate?
 
-    var searchedUsers = [User](){
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!  //TODO: remove
+
+    private var session = URLSession()
+
+    var searchedUsers = [User](){               //TODO: remove
         didSet{
-            tableView.reloadData()
+            collectionView.reloadData()
         }
     }
-    
+//    var searchedUserAvatars = [PhotoRecord](){
+//        didSet{
+//            collectionView.reloadData()
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+//        self.tableView.dataSource = self
+//        self.tableView.delegate = self
         self.searchBar.delegate = self
-        // Do any additional setup after loading the view.
-    }
 
+    }
 
 }
 
@@ -54,6 +68,35 @@ extension UserSearchViewController: UISearchBarDelegate {
     }
 }
 
+extension UserSearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let currentCell = collectionView.dequeueReusableCell(withReuseIdentifier: UserSearchCollectionViewCell.identifier,
+                                                             for: indexPath) as! UserSearchCollectionViewCell
+        currentCell.imageView.image = self.searchedUsers[indexPath.row].avatar.image
+        currentCell.usernameLabel.text = self.searchedUsers[indexPath.row].login
+
+        return currentCell
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        return searchedUsers.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let delegate = self.delegate else { return }
+
+        let user = self.searchedUsers[indexPath.row]
+
+        delegate.userSearchViewController(selected: user.avatar.image!)
+    }
+
+}
+
+//TODO: remove
 extension UserSearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)

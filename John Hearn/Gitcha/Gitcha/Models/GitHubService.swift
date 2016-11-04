@@ -12,16 +12,15 @@ let kBaseUrlString = "https://github.com/login/oauth"
 
 typealias GitHubAuthCompletion = (Bool)->()
 typealias RepoCompletion = ([Repository]?)->()
-typealias UserSearchCompletion = ([User]?) ->()
+typealias UserSearchCompletion = ([User]?)->()
+typealias PhotoRecordCompletion = (PhotoRecord?)->()
 
 enum SaveOptions{
     case userDefaults
 }
 
 enum GitHubOAuthError: Error{
-
     case extractingCode(String)
-
 }
 
 class GitHubService {
@@ -29,6 +28,13 @@ class GitHubService {
     private var session: URLSession
     private var urlComponents: URLComponents
     var allRepos = [Repository]()
+    lazy var downloadsInProgress = [IndexPath:Operation]()
+    lazy var downloadQueue: OperationQueue = {
+        var queue = OperationQueue()
+        queue.name = "Download queue"
+        queue.maxConcurrentOperationCount = 5
+        return queue
+    }()
 
     private init() {
         self.session = URLSession(configuration: .ephemeral)
@@ -44,6 +50,36 @@ class GitHubService {
                                               value: token)
             urlComponents.queryItems = [tokenQueryItem]
         }
+    }
+
+    func fetchUserAvatar(url: URL, completion: @escaping PhotoRecordCompletion) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
+        self.session.dataTask(with: url, completionHandler: {(data, response, error) in
+            if error != nil { completion(nil); return }
+            guard let data = data else { completion(nil); return }
+            do{
+                let datasourceDictionary = try
+                    PropertyListSerialization.propertyList(from: data,
+                                                           options: .mutableContainers,
+                                                           format: nil) as? [String:Any]
+                for(key, value) in datasourceDictionary! {
+                    let name = key
+                    if let url = URL(string: (value as? String)! ) {
+                        let photoRecord = PhotoRecord(name: name, url: url)
+//                        let download = ImageDownloader(photoRecord: photoRecord)
+//                        self.downloadQueue.addOperation(download)
+                        OperationQueue.main.addOperation {
+                            completion(photoRecord)
+                        }
+
+                    }
+                }
+            }catch {
+                print(error)
+            }
+        }).resume()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 
 
@@ -66,7 +102,15 @@ class GitHubService {
                     var searchedUsers = [User]()
 
                     for userJSON in items{
-                        if let user = User(json: userJSON) {
+                        if let user = User(json: userJSON),
+                            let url = URL(string: user.avatarUrl!) {
+                            self.fetchUserAvatar(url: url, completion: { (record) in
+                                if record != nil{
+                                    print("Avatar for \(user.login) found!")
+                                    user.avatar.image = record?.image
+                                }
+                            })
+
                             searchedUsers.append(user)
                         }
                     }
@@ -80,6 +124,14 @@ class GitHubService {
 
         }).resume()
     }
+
+
+
+//    func getAvatarFrom(url: URL) -> UIImage?{
+//        let image = UIImage()
+//
+//        return image
+//    }
 
 
     func fetchRepos(completion: @escaping RepoCompletion) {

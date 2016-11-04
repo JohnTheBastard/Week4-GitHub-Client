@@ -6,19 +6,26 @@
 //  Copyright © 2016 Bastardized Productions. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class User{
     let login: String
     let webUrl: String
     let avatarUrl: String?
+    lazy var avatar: PhotoRecord = {
+        var record = PhotoRecord()
+        record.name = self.login
+        record.url = URL(string: self.avatarUrl!)!
+        return record
+    }()
 
     init?(json: [String:Any]){
         if let login = json["login"] as? String,
-            let webUrl = json["html_url"] as? String {
+            let webUrl = json["html_url"] as? String,
+            let avatarUrl = json["avatar_url"] as? String{
             self.login = login
             self.webUrl = webUrl
-            self.avatarUrl = json["avatar_url"] as? String
+            self.avatarUrl = avatarUrl
         } else {
             return nil
         }

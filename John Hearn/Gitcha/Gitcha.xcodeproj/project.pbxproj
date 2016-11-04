@@ -17,6 +17,10 @@
 		F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */; };
 		F24C6D021DC91AB600F6833C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C6D011DC91AB600F6833C /* Repository.swift */; };
 		F275B6341DCBD50600CF105A /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275B6331DCBD50600CF105A /* UserSearchViewController.swift */; };
+		F275B6361DCBD93900CF105A /* UserSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275B6351DCBD93900CF105A /* UserSearchCollectionViewCell.swift */; };
+		F275B6381DCBE5CF00CF105A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275B6371DCBE5CF00CF105A /* ImageDownloader.swift */; };
+		F275B63A1DCBE8DA00CF105A /* PhotoRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275B6391DCBE8DA00CF105A /* PhotoRecord.swift */; };
+		F275B63C1DCBFBD500CF105A /* UserSearchCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F275B63B1DCBFBD500CF105A /* UserSearchCollectionViewLayout.swift */; };
 		F29F915D1DCA7F1B0008118E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F915C1DCA7F1B0008118E /* Credentials.swift */; };
 		F29F91601DCA91C20008118E /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F915E1DCA91C20008118E /* GitHubService.swift */; };
 		F29F91641DCA91F60008118E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29F91621DCA91F60008118E /* HomeViewController.swift */; };
@@ -39,6 +43,10 @@
 		F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controllers/AuthViewController.swift; sourceTree = "<group>"; };
 		F24C6D011DC91AB600F6833C /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Models/Repository.swift; sourceTree = "<group>"; };
 		F275B6331DCBD50600CF105A /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSearchViewController.swift; path = Controllers/UserSearchViewController.swift; sourceTree = "<group>"; };
+		F275B6351DCBD93900CF105A /* UserSearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSearchCollectionViewCell.swift; path = Views/UserSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		F275B6371DCBE5CF00CF105A /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Controllers/ImageDownloader.swift; sourceTree = "<group>"; };
+		F275B6391DCBE8DA00CF105A /* PhotoRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoRecord.swift; path = Models/PhotoRecord.swift; sourceTree = "<group>"; };
+		F275B63B1DCBFBD500CF105A /* UserSearchCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSearchCollectionViewLayout.swift; path = Views/UserSearchCollectionViewLayout.swift; sourceTree = "<group>"; };
 		F29F915C1DCA7F1B0008118E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = Support/Credentials.swift; sourceTree = "<group>"; };
 		F29F915E1DCA91C20008118E /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubService.swift; path = Models/GitHubService.swift; sourceTree = "<group>"; };
 		F29F91621DCA91F60008118E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F29F915E1DCA91C20008118E /* GitHubService.swift */,
+				F275B6391DCBE8DA00CF105A /* PhotoRecord.swift */,
 				F2402CCC1DCBA52500C8818B /* User.swift */,
 				F24C6D011DC91AB600F6833C /* Repository.swift */,
 			);
@@ -104,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F24C6CFF1DC8FAF800F6833C /* AuthViewController.swift */,
+				F275B6371DCBE5CF00CF105A /* ImageDownloader.swift */,
 				F29F91621DCA91F60008118E /* HomeViewController.swift */,
 				F29F91631DCA91F60008118E /* RepoDetailViewController.swift */,
 				F2402CCE1DCBB78900C8818B /* WebViewController.swift */,
@@ -116,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				F29F91671DCA92170008118E /* CustomTransition.swift */,
+				F275B63B1DCBFBD500CF105A /* UserSearchCollectionViewLayout.swift */,
+				F275B6351DCBD93900CF105A /* UserSearchCollectionViewCell.swift */,
 				F2402CBC1DCA932E00C8818B /* LaunchScreen.storyboard */,
 				F2402CBE1DCA932E00C8818B /* Main.storyboard */,
 				F2402CC61DCACF4A00C8818B /* RepositoryCell.swift */,
@@ -213,6 +225,7 @@
 			files = (
 				F2402CCD1DCBA52500C8818B /* User.swift in Sources */,
 				F29F916D1DCA924C0008118E /* AppDelegate.swift in Sources */,
+				F275B6381DCBE5CF00CF105A /* ImageDownloader.swift in Sources */,
 				F24C6D021DC91AB600F6833C /* Repository.swift in Sources */,
 				F29F915D1DCA7F1B0008118E /* Credentials.swift in Sources */,
 				F2402CC71DCACF4A00C8818B /* RepositoryCell.swift in Sources */,
@@ -221,7 +234,10 @@
 				F2402CC51DCACAB700C8818B /* RepositoryTableViewCell.swift in Sources */,
 				F29F91691DCA92170008118E /* CustomTransition.swift in Sources */,
 				F275B6341DCBD50600CF105A /* UserSearchViewController.swift in Sources */,
+				F275B6361DCBD93900CF105A /* UserSearchCollectionViewCell.swift in Sources */,
 				F24C6D001DC8FAF800F6833C /* AuthViewController.swift in Sources */,
+				F275B63C1DCBFBD500CF105A /* UserSearchCollectionViewLayout.swift in Sources */,
+				F275B63A1DCBE8DA00CF105A /* PhotoRecord.swift in Sources */,
 				F2402CCF1DCBB78900C8818B /* WebViewController.swift in Sources */,
 				F29F91651DCA91F60008118E /* RepoDetailViewController.swift in Sources */,
 				F29F91641DCA91F60008118E /* HomeViewController.swift in Sources */,
